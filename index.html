@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>18+ Video Site</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .age-check {
+      display: none;
+    }
+    .video-page {
+      display: none;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="age-check" id="ageCheck">
+    <h1>Are you 18 or older?</h1>
+    <button onclick="showSite()">Yes, Enter</button>
+    <button onclick="alert('Access denied. You must be 18+ to enter.');">No</button>
+  </div>
+
+  <div class="video-page" id="videoPage">
+    <h1>Welcome to 18+ Video Zone</h1>
+    <p>Viewer discretion advised.</p>
+
+    <!-- Example: replace this with your own video file or embed URL -->
+    <video width="720" controls>
+      <source src="https://example.com/yourvideo.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <script>
+    document.getElementById("ageCheck").style.display = "block";
+
+    function showSite() {
+      document.getElementById("ageCheck").style.display = "none";
+      document.getElementById("videoPage").style.display = "block";
+    }
+  </script>
+</body>
+</html>
